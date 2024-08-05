@@ -18,12 +18,15 @@ class MainActivity : AppCompatActivity() {
                 inflateFragment(GuardFragment.newInstance());
             }else if(menuItem.itemId == R.id.nav_home){
                 inflateFragment(HomeFragment.newInstance())
+            }else if(menuItem.itemId == R.id.nav_dashboard){
+                inflateFragment(DashboardFragment.newInstance())
+            }else{
+                inflateFragment(ProfileFragment.newInstance())
             }
-
-
-
             true
         }
+
+            navigationBar.selectedItemId = R.id.nav_home;
     }
 
     private fun inflateFragment(fr: Fragment){
