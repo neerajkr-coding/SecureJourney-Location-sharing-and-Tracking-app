@@ -30,9 +30,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val memberList = mutableListOf<Member>(Member("Neeraj",R.drawable.ic_home,"Delhi"))
-        memberList.add(Member("Arpit",R.drawable.ic_home,"Mumbai"))
-        memberList.add(Member("VK",R.drawable.ic_home,"Himachal"))
+        memberList.add(Member("Arpit",R.drawable.blue_gradient,"Mumbai"))
+        memberList.add(Member("VK",R.drawable.sos,"Himachal"))
         memberList.add(Member("Vaibhav K",R.drawable.dp_icon,"Hari nagar"))
+        memberList.add(Member("Vaibhav R",R.drawable.gaurd,"Mumbai"))
 
         val adapter = MemberAdapter(memberList)
 
