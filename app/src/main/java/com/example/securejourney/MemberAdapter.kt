@@ -25,6 +25,7 @@ class MemberAdapter(private val memberList:MutableList<Member>):
         holder.name.setText(i.name)
         holder.dp.setImageResource(i.img)
         holder.location.setText(i.loc)
+        holder.battery.setText(i.battery)
     }
 
     override fun getItemCount(): Int {
@@ -36,5 +37,7 @@ class MemberAdapter(private val memberList:MutableList<Member>):
         val dp = item.findViewById<ImageView>(R.id.pic)
         val name = item.findViewById<TextView>(R.id.user_name)
         val location = item.findViewById<TextView>(R.id.user_location)
+        val battery = item.findViewById<TextView>(R.id.Battery_percent)
+
     }
 }
