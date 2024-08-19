@@ -41,6 +41,27 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 
+
+        //invite RecyclerView
+
+        val contactsList = mutableListOf<Contacts>()
+        contactsList.add(Contacts("Neeraj",7011903243))
+        contactsList.add(Contacts("Arpit",9990110200))
+        contactsList.add(Contacts("Vk",1234567890))
+        contactsList.add(Contacts("Neeraj",7011903243))
+        contactsList.add(Contacts("Arpit",9990110200))
+        contactsList.add(Contacts("Vk",1234567890))
+        contactsList.add(Contacts("Neeraj",7011903243))
+        contactsList.add(Contacts("Arpit",9990110200))
+        contactsList.add(Contacts("Vk",1234567890))
+
+        val ContactsAdapter = ContactsAdapter(contactsList)
+
+
+        val inviteRecyclerview = requireView().findViewById<RecyclerView>(R.id.recyclerView_invite)
+        inviteRecyclerview.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,  false)
+        inviteRecyclerview.adapter = ContactsAdapter
+
     }
 
     companion object {
