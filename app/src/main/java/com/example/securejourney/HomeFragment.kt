@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
         memberList.add(Member("Arpit",R.drawable.blue_gradient,"Mumbai","60%"))
         memberList.add(Member("VK",R.drawable.sos,"Himachal","80%"))
         memberList.add(Member("Vaibhav K",R.drawable.dp_icon,"Hari nagar","22%"))
-        memberList.add(Member("Vaibhav R",R.drawable.gaurd,"Mumbai","75%"))
+        memberList.add(Member("Vaibhav",R.drawable.gaurd,"Mumbai","75%"))
 
         val adapter = MemberAdapter(memberList)
 
