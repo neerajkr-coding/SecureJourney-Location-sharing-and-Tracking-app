@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -9,6 +11,21 @@ android {
     compileSdk = 34
 
     defaultConfig {
+
+        val keystoreFile = project.rootProject.file("local.properties")
+        val properties = Properties()
+        properties.load(keystoreFile.inputStream())
+
+        val apiKey = properties.getProperty("MAP_API_KEY") ?: ""
+
+        buildConfigField(
+            type = "String",
+            name = "MAP_API_KEY",
+            value = apiKey
+        )
+
+
+
         applicationId = "com.example.securejourney"
         minSdk = 24
         targetSdk = 34
@@ -31,7 +48,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
 }
+
 
 dependencies {
 

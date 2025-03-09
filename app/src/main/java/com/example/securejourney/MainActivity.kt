@@ -21,10 +21,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val apiKey = BuildConfig.MAP_API_KEY
+        Log.d("Test Key", apiKey)
+
         Log.d("TOBI_TAG", "This is a debug message")
 
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),1001 )
-
 
 
         val navigationBar = findViewById<BottomNavigationView>(R.id.navigationBar)
