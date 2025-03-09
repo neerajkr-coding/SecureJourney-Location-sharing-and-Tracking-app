@@ -3,5 +3,5 @@
 /workspace.xml
 /local.properties
 /build.gradle.kts
-/AndroidManifest.xml
+/app/src/main/AndroidManifest.xmlg
 
